@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Print from WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <h2>Simple Bluetooth Printer</h2>
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <h2>Current Logo</h2>
+          <div class="logo">
+            <img id="currentImage" src="" alt="Current Logo">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h2>Upload Logo</h2>
+          <div class="preview logo">
+            <img id="previewImage" src="" alt="Preview" hidden>
+          </div>
+          <div class="input-group">
+            <input type="file" id="imageUpload" accept="images/*">
+            <button class="btn" id="uploadBtn">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <label for="message"><strong>Enter Message</strong></label>
+      <textarea id="message" rows="5" placeholder="Type something..."></textarea>
+    </div>
+  
+    <div class="card">
+      <button id="print">Print</button>
+    </div>
+  
+    <div id="dialog">
+      <h2>Error</h2>
+      <p>Could not connect to bluetooth device!</p>
+    </div>
+  </div>
+
+ 
+   <script src="script.js"></script>
+ </body>
+</html> 
