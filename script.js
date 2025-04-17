@@ -13,6 +13,13 @@ const currentImage = document.getElementById("currentImage");
 const previewImage = document.getElementById("previewImage");
 const uploadBtn = document.getElementById('uploadBtn');
 progress.hidden = true;
+
+let canvas = document.createElement('canvas');
+// Canvas dimensions need to be a multiple of 40 for this printer
+canvas.width = 120;
+canvas.height = 120;
+let context = canvas.getContext("2d");
+
 imageCheck();
 function imageCheck () {
    const fileName = currentImage.getAttribute('src').split('/').pop();
@@ -31,11 +38,7 @@ function imageCheck () {
    }
 }
 
-let canvas = document.createElement('canvas');
-// Canvas dimensions need to be a multiple of 40 for this printer
-canvas.width = 120;
-canvas.height = 120;
-let context = canvas.getContext("2d");
+
         
 function getDarkPixel(x, y) {
    // Return the pixels that will be printed black
